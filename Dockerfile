@@ -7,5 +7,5 @@ WORKDIR /platform
 
 RUN pip install Flask SQLAlchemy bcrypt requests PyMySQL gunicorn
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-w", "4", "platform:create_app()"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-w", "4", "app:create_app()"]
 EXPOSE 8000
