@@ -5,7 +5,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y python python-pip python-d
 COPY . /platform
 WORKDIR /platform
 
-RUN pip install Flask SQLAlchemy bcrypt requests PyMySQL gunicorn
+RUN pip install Flask Flask-SQLAlchemy Flask-Session SQLAlchemy bcrypt requests PyMySQL gunicorn
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-w", "4", "app:create_app()"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-w", "4", "app.app"]
 EXPOSE 8000

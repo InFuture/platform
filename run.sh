@@ -6,4 +6,4 @@ docker build -t platform $BASEDIR
 tmux kill-session -t plaform
 docker rm platform
 # tmux new-session -s platform -d "docker run -it -p 8000:4000 --name platform platform"
-docker run -it -p 8000:4000 --name platform platform
+docker run -it -p 4000:8000 --name platform platform
