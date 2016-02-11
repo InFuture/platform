@@ -1,4 +1,6 @@
+.c9
+node_modules
+.secret
+.env
+.cookie_secret
 .vagrant
-Vagrantfile
-*.pyc
-logs

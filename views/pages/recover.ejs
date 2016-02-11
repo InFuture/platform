@@ -1,0 +1,63 @@
+<% include ../includes/header %>
+
+<% if (page.logged_in) { %>
+	<script type="text/javascript">
+		location.href = "/";
+	</script>
+<% } else { %>
+	<div class="osu-layout__section osu-layout__section--full js-content community_tournaments-index">
+		<div class="osu-layout__row osu-layout__row--page wiki-header">
+			<div class="text">
+				<h1>recover password</h1>
+			</div>
+		</div>
+		<div class="osu-layout__row osu-layout__row--page-compact osu-layout__row--sm1">
+			<div class="osu-layout__sub-row">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="row">
+							<% if (page.csrf_token) { %>
+								<div id="recover_msg"></div>
+								<form accept-charset="UTF-8" class="modal-body__form form" action="javascript:login_form();" id="login_form" onsubmit="login_form();return false;">
+									<div class="form__input-group form-group form-group--compact">
+										<input class="modal-af form-group__control form-control form-group__control--compact" name="code" id="code" type="email" placeholder="Code" required="" autocomplete="off" disabled>
+										<input class="form-group__control form-control form-group__control--compact" name="password" id="password" type="password" placeholder="Password" required="" autocomplete="off" autofocus>
+										<input class="form-group__control form-control form-group__control--compact" name="password2" id="password2" type="password" placeholder="Password (again)" required="" autocomplete="off">
+									</div>
+									<button class="btn-osu btn-osu-default form__button" type="submit"><i class="fa fa-sign-in"></i></button>
+								</form>
+							<% } else { %>
+								<div class="alert alert-danger">
+									Sorry, login is not possible at this moment.</p>
+								</div>
+							<% } %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#code").val(location.hash.substring(1));
+		});
+		var login_form = function() {
+			var disable = "input:not(#code)";
+			$(disable).attr("disabled", "disabled");
+			$.post("/api/user/recover", {
+				_csrf: "<%- page.csrf_token %>",
+				code: $("#code").val(),
+				password: $("#password").val(),
+				password2: $("#password2").val()
+			}, function(result) {
+				display_message("#recover_msg", (result.success == 1 ? "success" : "danger"), result.message, function() {
+					if (result.success == 1) { location.href = "/login"; }
+					else { $(disable).removeAttr("disabled"); }
+				});
+			});
+		};
+	</script>
+<% } %>
+
+<% include ../includes/footer %>

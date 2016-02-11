@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title><% if (page.title.length > 0) { %><%= page.title %> - <% } %>InFuture</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.css" integrity="sha384-X6BCz/5YN8CudtAN21w+htVJP5lJNqXP0VBfbGzrX7A/FhjpPIoMtiRRHxRYiKU6" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" integrity="sha384-fj9YEHKNa/e0CNquG4NcocjoyMATYo1k2Ff5wGB42C/9AwOlJjDoySPtNJalccfI" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="/js/infuture.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js" integrity="sha384-1qZEXZBmj54fSiiWT8bZQGEpCumJWDrAoEqMdg6N5bTTLCkU5RXoNeUsKWekRYob" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<% if (page["logged_in"] == true && !page["user_info"]["email_verified"]) { %>
+			<div class="alert alert-danger" style="margin:0;">
+				<div class="container">
+					Your email address isn't verified. <a href="javascript:resend_verification();">Need another email?</a>
+				</div>
+			</div>
+		<% } %>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						InFuture
+					</a>
+				</div>
+
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+
+				<% if (page.logged_in == true) { %>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/dashboard">Dashboard</a></li>
+						<li><a href="/logout">Logout</a></li>
+					</ul>
+				<% } else { %>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/register">Register</a></li>
+						<li><a href="/login">Login</a></li>
+					</ul>
+				<% } %>
+			</div>
+		</nav>

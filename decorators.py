@@ -1,1 +1,0 @@
-class WebException(Exception): pass

@@ -1,0 +1,28 @@
+{
+  "name": "infuture",
+  "version": "1.0.0",
+  "description": "InFuture Platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "Michael Zhang",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.0",
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "csrf": "^3.0.0",
+    "csurf": "^1.8.3",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-minify": "^0.1.6",
+    "express-session": "^1.12.1",
+    "moment": "^2.10.6",
+    "mongodb": "^2.0.48",
+    "request": "^2.65.0",
+    "validator": "^4.2.1"
+  }
+}
