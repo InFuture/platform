@@ -363,10 +363,10 @@ html {
     color: #555; }
 
 .banner {
-  height: 40%;
+  height: 50%;
   width: 100%;
-  background: url(../images/city.svg) center bottom no-repeat, linear-gradient(#003380, #0052cc, #66a4ff 80%, #ffb402);
-  background-size: auto 33%, 100% 100%;
+  background: url(../images/city.svg) center bottom no-repeat, linear-gradient(#003380, #0052cc, #66a4ff 81%, #ffb402);
+  background-size: 275% auto, 100% 100%;
   color: #fdfdfd; }
   .banner .vertical-center {
     top: 40%;
@@ -387,6 +387,26 @@ html {
 .application {
   background: #2C5AA0;
   background: #2C5AA0; }
+  .application .container {
+    padding: 4.6875em 0; }
+    .application .container input {
+      display: block;
+      margin: 0.9375em auto;
+      height: 2.9375em;
+      width: 28.125em;
+      padding: 0 1.5625em;
+      background: none;
+      background: none;
+      border-bottom: 2px solid #ccc;
+      font-size: 1.375em; }
+      .application .container input:hover {
+        border-bottom: 2px solid #fdfdfd; }
+    .application .container button {
+      height: 2.9375em;
+      width: 28.125em;
+      margin: 1.875em auto 0;
+      padding: 0 1.5625em;
+      font-size: 1.375em; }
 
 footer {
   background: #214478;

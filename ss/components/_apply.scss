@@ -1,10 +1,10 @@
 .banner	{
-	@include size(100% 40%);
+	@include size(100% 50%);
 	// @include background(#001738);
 	// @include background(url("../images/stars.png") center top no-repeat, linear-gradient(#001738 15%, #002e72, #003380 100%) center bottom no-repeat);
 	
-	background: url(../images/city.svg) center bottom no-repeat, linear-gradient(#003380, #0052cc, #66a4ff 80%, #ffb402);
-	background-size: auto 33%, 100% 100%;
+	background: url(../images/city.svg) center bottom no-repeat, linear-gradient(#003380, #0052cc, #66a4ff 81%, #ffb402);
+	background-size: 275% auto, 100% 100%;
 
 	color: $color-white;	
 
@@ -34,4 +34,28 @@
 .application {
 	@include background(#2C5AA0);
 
+	.container {
+		@include padding(em(75px) 0);
+
+		input {
+			display: block;
+			@include margin(em(15px) auto);
+			@include size(em(450px) em(47px));
+			@include padding(0 em(25px));
+			@include background(none);
+			border-bottom: 2px solid $color-silver;
+			font-size: em(22px);
+
+			&:hover {
+				border-bottom: 2px solid $color-white;
+			}
+		}
+
+		button {
+			@include size(em(450px) em(47px));
+			@include margin(em(30px) auto 0);
+			@include padding(0 em(25px));
+			font-size: em(22px);
+		}
+	}
 }
