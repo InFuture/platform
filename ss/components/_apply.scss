@@ -1,0 +1,28 @@
+.banner	{
+	@include size(100% 20%);
+	@include background(#001738);
+	@include background(url("../images/stars.png") center top no-repeat, linear-gradient(#001738 15%, #002e72, #003380 100%) center bottom no-repeat);
+	background-size: 100% 70%, cover;
+	color: $color-white;	
+
+	.vertical-center {
+		text-align: center;
+	}
+	
+	.logo {
+		width: em(175px);
+	}
+
+	h1.title {
+		@include margin(em(2px) 0 0);
+		font-family: $title-font;
+		@include font-sw(em(64px), 400);
+		text-transform: uppercase;
+		line-height: 1.15;
+
+		span {
+			color: $color-dodgerblue;
+			font-weight: 300;
+		}
+	}
+}

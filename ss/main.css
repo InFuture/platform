@@ -176,6 +176,15 @@ table {
                                           
 *****************************************************************
 ****************************************************************/
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -353,137 +362,29 @@ html {
   .social a:nth-child(4):hover {
     color: #555; }
 
-.intro {
-  height: 100%;
+.banner {
+  height: 20%;
   width: 100%;
-  min-height: 100%;
-  margin: 0;
   background: #001738;
   background: #001738;
   background: url("../images/stars.png") center top no-repeat, -webkit-linear-gradient(#001738 15%, #002e72, #003380 100%) center bottom no-repeat;
   background: url("../images/stars.png") center top no-repeat, linear-gradient(to   , #002e72, #003380 100%) center bottom no-repeat;
   background-size: 100% 70%, cover;
   color: #fdfdfd; }
-  .intro .vertical-center {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
+  .banner .vertical-center {
     text-align: center; }
-  .intro .logo {
-    width: 15.625em; }
-  .intro h1.title {
+  .banner .logo {
+    width: 10.9375em; }
+  .banner h1.title {
     margin: 0.125em 0 0;
     font-family: "Raleway", "Open Sans", sans-serif;
-    font-size: 6.75em;
+    font-size: 4em;
     font-weight: 400;
     text-transform: uppercase;
     line-height: 1.15; }
-    .intro h1.title span {
+    .banner h1.title span {
       color: #229aff;
       font-weight: 300; }
-  .intro h3.description {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #eee; }
-  .intro h5.details {
-    margin: 0.1875em 0 0;
-    font-size: 1em;
-    font-weight: 300;
-    line-height: 1.5;
-    color: #ccc; }
-  .intro #sub-form1 {
-    margin: 7vh auto 0; }
-    .intro #sub-form1 input, .intro #sub-form1 button {
-      display: inline-block; }
-    .intro #sub-form1 h6 {
-      margin: 0.625em auto 0;
-      color: #aaa; }
-  .intro .social {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    text-align: center; }
-
-.faq {
-  background: url(../images/city.svg) center bottom no-repeat, linear-gradient(#003380, #0052cc, #66a4ff 80%, #ffb402);
-  background-size: auto 33%, 100% 100%;
-  padding: 7% 0 20%; }
-  @media screen and (max-width: 62.5em) {
-    .faq {
-      padding: 5% 0 30%; } }
-  .faq .faq-nav {
-    @includem margin(0 auto));
-    padding: 0 0.625em 6.25em; }
-    .faq .faq-nav div {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 25%;
-      padding: 0.9375em 0;
-      color: #fdfdfd;
-      background: rgba(255, 255, 255, 0.15);
-      font-family: "Open Sans", "Raleway", sans-serif;
-      font-size: 1.125em;
-      font-weight: 400;
-      text-align: center;
-      -webkit-transition: all 175ms ease;
-      -moz-transition: all 175ms ease;
-      -ms-transition: all 175ms ease;
-      -o-transition: all 175ms ease;
-      transition: all 175ms ease; }
-      .faq .faq-nav div:last-child {
-        margin-right: 0; }
-      .faq .faq-nav div:hover {
-        background: rgba(255, 255, 255, 0.33); }
-      .faq .faq-nav div.active {
-        background: rgba(255, 255, 255, 0.33); }
-  .faq .container .block {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 33.33333%;
-    padding: 0 0.625em; }
-    .faq .container .block:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 62.5em) {
-      .faq .container .block {
-        float: left;
-        display: block;
-        margin-right: 0%;
-        width: 50%; }
-        .faq .container .block:last-child {
-          margin-right: 0; } }
-    @media screen and (max-width: 45em) {
-      .faq .container .block {
-        float: left;
-        display: block;
-        margin-right: 0%;
-        width: 100%; }
-        .faq .container .block:last-child {
-          margin-right: 0; } }
-    .faq .container .block h2.question {
-      color: #fdfdfd;
-      margin: 0 0 0.1875em;
-      font-size: 1.75em;
-      font-weight: 400; }
-    .faq .container .block p.answer {
-      color: #ddd;
-      margin: 0 0 1.5625em;
-      font-size: 1.125em;
-      font-weight: 400; }
-
-.sponsors {
-  padding: 0 0 1.5625em;
-  background: #2C5AA0;
-  background: #2C5AA0;
-  text-align: center; }
-  .sponsors img {
-    width: 18.75em; }
 
 footer {
   background: #214478;

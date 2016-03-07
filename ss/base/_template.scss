@@ -13,6 +13,10 @@
   @include transform(translateY(-50%));
 }
 
+.vertical-center {
+	@include vertical-center;
+}
+
 @mixin font-sw($args...) {
 	// IF length == 1: $size
 	// IF length == 2: $size, $weight
