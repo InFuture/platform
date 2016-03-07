@@ -1,20 +1,24 @@
 .banner	{
-	@include size(100% 20%);
-	@include background(#001738);
-	@include background(url("../images/stars.png") center top no-repeat, linear-gradient(#001738 15%, #002e72, #003380 100%) center bottom no-repeat);
-	background-size: 100% 70%, cover;
+	@include size(100% 40%);
+	// @include background(#001738);
+	// @include background(url("../images/stars.png") center top no-repeat, linear-gradient(#001738 15%, #002e72, #003380 100%) center bottom no-repeat);
+	
+	background: url(../images/city.svg) center bottom no-repeat, linear-gradient(#003380, #0052cc, #66a4ff 80%, #ffb402);
+	background-size: auto 33%, 100% 100%;
+
 	color: $color-white;	
 
 	.vertical-center {
+		top: 40%;
 		text-align: center;
 	}
 	
 	.logo {
-		width: em(175px);
+		width: em(150px);
 	}
 
 	h1.title {
-		@include margin(em(2px) 0 0);
+		@include margin(em(5px) 0 0);
 		font-family: $title-font;
 		@include font-sw(em(64px), 400);
 		text-transform: uppercase;
@@ -25,4 +29,9 @@
 			font-weight: 300;
 		}
 	}
+}
+
+.application {
+	@include background(#2C5AA0);
+
 }

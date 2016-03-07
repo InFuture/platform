@@ -363,20 +363,18 @@ html {
     color: #555; }
 
 .banner {
-  height: 20%;
+  height: 40%;
   width: 100%;
-  background: #001738;
-  background: #001738;
-  background: url("../images/stars.png") center top no-repeat, -webkit-linear-gradient(#001738 15%, #002e72, #003380 100%) center bottom no-repeat;
-  background: url("../images/stars.png") center top no-repeat, linear-gradient(to   , #002e72, #003380 100%) center bottom no-repeat;
-  background-size: 100% 70%, cover;
+  background: url(../images/city.svg) center bottom no-repeat, linear-gradient(#003380, #0052cc, #66a4ff 80%, #ffb402);
+  background-size: auto 33%, 100% 100%;
   color: #fdfdfd; }
   .banner .vertical-center {
+    top: 40%;
     text-align: center; }
   .banner .logo {
-    width: 10.9375em; }
+    width: 9.375em; }
   .banner h1.title {
-    margin: 0.125em 0 0;
+    margin: 0.3125em 0 0;
     font-family: "Raleway", "Open Sans", sans-serif;
     font-size: 4em;
     font-weight: 400;
@@ -385,6 +383,10 @@ html {
     .banner h1.title span {
       color: #229aff;
       font-weight: 300; }
+
+.application {
+  background: #2C5AA0;
+  background: #2C5AA0; }
 
 footer {
   background: #214478;
