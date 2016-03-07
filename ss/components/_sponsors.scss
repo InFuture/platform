@@ -1,0 +1,9 @@
+.sponsors {
+	@include padding(0 0 em(25px));
+	@include background(#2C5AA0);
+	text-align: center;
+
+	img {
+		width: em(300px);
+	}
+}

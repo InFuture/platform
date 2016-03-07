@@ -1,2 +1,0 @@
-InFuture Platform
-======
