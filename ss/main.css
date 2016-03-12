@@ -84,7 +84,7 @@ code, kbd, pre, samp {
   font-family: monospace,monospace;
   font-size: 1em; }
 
-button, input, .application .container select, optgroup, select, textarea {
+button, input, .application .container select, .application .container textarea, optgroup, select, textarea {
   color: inherit;
   font: inherit;
   margin: 0; }
@@ -95,34 +95,34 @@ button {
 button, select {
   text-transform: none; }
 
-button, html input[type=button], html .application .container select[type=button], .application .container html select[type=button], input[type=reset], .application .container select[type=reset], input[type=submit], .application .container select[type=submit] {
+button, html input[type=button], html .application .container select[type=button], .application .container html select[type=button], html .application .container textarea[type=button], .application .container html textarea[type=button], input[type=reset], .application .container select[type=reset], .application .container textarea[type=reset], input[type=submit], .application .container select[type=submit], .application .container textarea[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled], html input[disabled], html .application .container select[disabled], .application .container html select[disabled] {
+button[disabled], html input[disabled], html .application .container select[disabled], .application .container html select[disabled], html .application .container textarea[disabled], .application .container html textarea[disabled] {
   cursor: default; }
 
-button::-moz-focus-inner, input::-moz-focus-inner, .application .container select::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner, .application .container select::-moz-focus-inner, .application .container textarea::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input, .application .container select {
+input, .application .container select, .application .container textarea {
   line-height: normal; }
 
-input[type=checkbox], .application .container select[type=checkbox], input[type=radio], .application .container select[type=radio] {
+input[type=checkbox], .application .container select[type=checkbox], .application .container textarea[type=checkbox], input[type=radio], .application .container select[type=radio], .application .container textarea[type=radio] {
   box-sizing: border-box;
   padding: 0; }
 
-input[type=number]::-webkit-inner-spin-button, .application .container select[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button, .application .container select[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button, .application .container select[type=number]::-webkit-inner-spin-button, .application .container textarea[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button, .application .container select[type=number]::-webkit-outer-spin-button, .application .container textarea[type=number]::-webkit-outer-spin-button {
   height: auto; }
 
-input[type=search], .application .container select[type=search] {
+input[type=search], .application .container select[type=search], .application .container textarea[type=search] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
-input[type=search]::-webkit-search-cancel-button, .application .container select[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, .application .container select[type=search]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button, .application .container select[type=search]::-webkit-search-cancel-button, .application .container textarea[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, .application .container select[type=search]::-webkit-search-decoration, .application .container textarea[type=search]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
@@ -301,7 +301,7 @@ button {
   button:hover {
     background-color: #55b1ff; }
 
-input, .application .container select {
+input, .application .container select, .application .container textarea {
   height: 2.625em;
   width: 23.4375em;
   margin: 0 auto;
@@ -398,6 +398,13 @@ html {
       clear: both;
       content: "";
       display: table; }
+    .application .container h2.header {
+      margin: 0.3125em 0 0;
+      color: #fdfdfd;
+      font-family: "Raleway", "Open Sans", sans-serif;
+      font-size: 2.25em;
+      font-weight: 400;
+      line-height: 1.15; }
     .application .container fieldset {
       position: relative;
       margin: 0;
@@ -411,7 +418,7 @@ html {
       font-size: 1.375em;
       transform: translate3d(0, 0, 0);
       transition: all 0.2s ease-in-out; }
-    .application .container input, .application .container select {
+    .application .container input, .application .container select, .application .container textarea {
       display: block;
       height: 3.125em;
       width: 100%;
@@ -427,9 +434,9 @@ html {
       outline: 0;
       appearance: none;
       transition: all 0.2s ease-in-out; }
-      .application .container input:valid, .application .container select:valid, .application .container input:focus, .application .container select:focus {
+      .application .container input:valid, .application .container select:valid, .application .container textarea:valid, .application .container input:focus, .application .container select:focus, .application .container textarea:focus {
         border-bottom: 2px solid #ccc; }
-      .application .container input:valid + label, .application .container select:valid + label, .application .container input:focus + label, .application .container select:focus + label {
+      .application .container input:valid + label, .application .container select:valid + label, .application .container textarea:valid + label, .application .container input:focus + label, .application .container select:focus + label, .application .container textarea:focus + label {
         color: #eee;
         font-weight: 500;
         font-size: 1em;
@@ -441,6 +448,18 @@ html {
       border-bottom: 1px solid #777; }
       .application .container select option:last-child {
         border-bottom: 0; }
+    .application .container .divider {
+      height: 6.25em;
+      width: 100%; }
+    .application .container textarea {
+      max-width: 100%;
+      overflow: auto;
+      resize: none;
+      line-height: 1.33; }
+      .application .container textarea + label {
+        top: 3.125em; }
+      .application .container textarea:valid + label, .application .container textarea:focus + label {
+        transform: translate3d(0, -2.75em, 0); }
     .application .container button {
       height: 2.9375em;
       width: 100%;
