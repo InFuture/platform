@@ -91,8 +91,23 @@
 		    }
 		}
 
+		select {
+			@extend input;
+
+			option {
+				color: $color-emperor;
+				@include padding(em(15px) 0);
+				font-size: em(12px);
+				border-bottom: 1px solid $color-boulder;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+
 		button {
-			@include size(em(450px) em(47px));
+			@include size(100% em(47px));
 			@include margin(em(30px) auto 0);
 			@include padding(0 em(25px));
 			font-size: em(22px);

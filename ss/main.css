@@ -84,7 +84,7 @@ code, kbd, pre, samp {
   font-family: monospace,monospace;
   font-size: 1em; }
 
-button, input, optgroup, select, textarea {
+button, input, .application .container select, optgroup, select, textarea {
   color: inherit;
   font: inherit;
   margin: 0; }
@@ -95,34 +95,34 @@ button {
 button, select {
   text-transform: none; }
 
-button, html input[type=button], input[type=reset], input[type=submit] {
+button, html input[type=button], html .application .container select[type=button], .application .container html select[type=button], input[type=reset], .application .container select[type=reset], input[type=submit], .application .container select[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled], html input[disabled] {
+button[disabled], html input[disabled], html .application .container select[disabled], .application .container html select[disabled] {
   cursor: default; }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner, .application .container select::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input {
+input, .application .container select {
   line-height: normal; }
 
-input[type=checkbox], input[type=radio] {
+input[type=checkbox], .application .container select[type=checkbox], input[type=radio], .application .container select[type=radio] {
   box-sizing: border-box;
   padding: 0; }
 
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button, .application .container select[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button, .application .container select[type=number]::-webkit-outer-spin-button {
   height: auto; }
 
-input[type=search] {
+input[type=search], .application .container select[type=search] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
-input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button, .application .container select[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, .application .container select[type=search]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 fieldset {
@@ -301,7 +301,7 @@ button {
   button:hover {
     background-color: #55b1ff; }
 
-input {
+input, .application .container select {
   height: 2.625em;
   width: 23.4375em;
   margin: 0 auto;
@@ -411,7 +411,7 @@ html {
       font-size: 1.375em;
       transform: translate3d(0, 0, 0);
       transition: all 0.2s ease-in-out; }
-    .application .container input {
+    .application .container input, .application .container select {
       display: block;
       height: 3.125em;
       width: 100%;
@@ -427,16 +427,23 @@ html {
       outline: 0;
       appearance: none;
       transition: all 0.2s ease-in-out; }
-      .application .container input:valid, .application .container input:focus {
+      .application .container input:valid, .application .container select:valid, .application .container input:focus, .application .container select:focus {
         border-bottom: 2px solid #ccc; }
-      .application .container input:valid + label, .application .container input:focus + label {
+      .application .container input:valid + label, .application .container select:valid + label, .application .container input:focus + label, .application .container select:focus + label {
         color: #eee;
         font-weight: 500;
         font-size: 1em;
         transform: translate3d(0, -1.5em, 0); }
+    .application .container select option {
+      color: #555;
+      padding: 0.9375em 0;
+      font-size: 0.75em;
+      border-bottom: 1px solid #777; }
+      .application .container select option:last-child {
+        border-bottom: 0; }
     .application .container button {
       height: 2.9375em;
-      width: 28.125em;
+      width: 100%;
       margin: 1.875em auto 0;
       padding: 0 1.5625em;
       font-size: 1.375em; }
