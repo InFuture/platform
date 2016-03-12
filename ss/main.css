@@ -388,19 +388,52 @@ html {
   background: #2C5AA0;
   background: #2C5AA0; }
   .application .container {
+    width: 33.75em;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
     padding: 4.6875em 0; }
+    .application .container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .application .container fieldset {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      border: 0; }
+    .application .container label {
+      position: absolute;
+      top: 1.875em;
+      left: 1.5em;
+      color: #aaa;
+      font-size: 1.375em;
+      transform: translate3d(0, 0, 0);
+      transition: all 0.2s ease-in-out; }
     .application .container input {
       display: block;
+      height: 3.125em;
+      width: 100%;
       margin: 0.9375em auto;
-      height: 2.9375em;
-      width: 28.125em;
-      padding: 0 1.5625em;
+      padding: 0.9375em 1.125em;
+      font-size: 1.375em;
+      font-weight: 400;
+      border-bottom: 2px solid #777;
+      border-radius: 0;
+      line-height: 3.125em;
       background: none;
-      background: none;
-      border-bottom: 2px solid #ccc;
-      font-size: 1.375em; }
-      .application .container input:hover {
-        border-bottom: 2px solid #fdfdfd; }
+      color: #eee;
+      outline: 0;
+      appearance: none;
+      transition: all 0.2s ease-in-out; }
+      .application .container input:valid, .application .container input:focus {
+        border-bottom: 2px solid #ccc; }
+      .application .container input:valid + label, .application .container input:focus + label {
+        color: #eee;
+        font-weight: 500;
+        font-size: 1em;
+        transform: translate3d(0, -1.5em, 0); }
     .application .container button {
       height: 2.9375em;
       width: 28.125em;

@@ -35,20 +35,60 @@
 	@include background(#2C5AA0);
 
 	.container {
+		width: em(540px);	
+		@include outer-container(90%);
+		@include margin(0 auto);
 		@include padding(em(75px) 0);
+
+		fieldset {
+		    position: relative;
+		    @include margin(0);
+		    @include padding(0);
+		    border: 0;
+		}
+
+		label {
+		    position: absolute;
+		    top: em(30px);
+		    left: em(24px);
+		    color: $color-silverchalice;
+		    font-size: em(22px);
+		    transform: translate3d(0, 0, 0);
+		    transition: all 0.2s ease-in-out;
+		}
 
 		input {
 			display: block;
+		    @include size(100% em(50px));
 			@include margin(em(15px) auto);
-			@include size(em(450px) em(47px));
-			@include padding(0 em(25px));
-			@include background(none);
-			border-bottom: 2px solid $color-silver;
-			font-size: em(22px);
+			@include padding(em(15px) em(18px));
 
-			&:hover {
-				border-bottom: 2px solid $color-white;
-			}
+		    font-size: em(22px);
+		    font-weight: 400;
+
+		    border-bottom: 2px solid $color-boulder;
+		    border-radius: 0;
+		    
+		    line-height: em(50px);
+		    background: none;
+		    color: $color-gallery;
+
+		    outline: 0;
+		    appearance: none;
+		    transition: all 0.2s ease-in-out;
+
+		    &:valid,
+		    &:focus {
+		    	border-bottom: 2px solid $color-silver;
+		    }
+		    
+		    &:valid + label,
+		    &:focus + label {
+		        color: $color-gallery;
+		        font-weight: 500;
+		        font-size: em(16px);
+		        transform: translate3d(0, em(-24px), 0);
+		    }
 		}
 
 		button {

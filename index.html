@@ -20,13 +20,13 @@
         <section class="application">
             <form action="">
                 <div class="container">
-                    <input type="text" placeholder="Your name">
-                    <input type="text" placeholder="What's your name?">
-                    <input type="text" placeholder="What's your name?">
-                    <input type="text" placeholder="What's your name?">
-                    <input type="text" placeholder="What's your name?">
-                    <input type="text" placeholder="What's your name?">
-                    <button class="submit">Submit Application</button>
+                    <fieldset>
+                        <input id="name" name="name" type="text" autocomplete="off" required>
+                        <label for="name">Name</label>
+                    </fieldset>
+                    <div class="button-container">
+                        <button class="submit">Submit Application</button>
+                    </div>
                 </div>
             </form>
         </section>
