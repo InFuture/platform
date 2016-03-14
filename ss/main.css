@@ -441,13 +441,15 @@ html {
         font-weight: 500;
         font-size: 1em;
         transform: translate3d(0, -1.5em, 0); }
-    .application .container select option {
-      color: #555;
-      padding: 0.9375em 0;
-      font-size: 0.75em;
-      border-bottom: 1px solid #777; }
-      .application .container select option:last-child {
-        border-bottom: 0; }
+    .application .container select {
+      padding: 0.9375em 0.875em; }
+      .application .container select option {
+        color: #555;
+        padding: 0.9375em 0;
+        font-size: 0.75em;
+        border-bottom: 1px solid #777; }
+        .application .container select option:last-child {
+          border-bottom: 0; }
     .application .container .divider {
       height: 6.25em;
       width: 100%; }

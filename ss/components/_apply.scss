@@ -101,6 +101,7 @@
 
 		select {
 			@extend input;
+			@include padding(em(15px) em(14px));
 
 			option {
 				color: $color-emperor;
